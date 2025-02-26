@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="Unit Converter", page_icon="🔄", layout="wide")
 
 # Sidebar Navigation
-st.sidebar.title("⚙ Options")
-page = st.sidebar.radio("Go to", ["Home" ,"About", "Contact"])
+st.sidebar.title("⚙️ Options")
+page = st.sidebar.radio("Go to", ["Home", "Progress Graphs" ,"About", "Contact"])
 
 # Home Page - Unit Converter
 if page == "Home":
@@ -36,7 +36,7 @@ if page == "Home":
     }
 
     # Show Definition & Formula
-    st.info(f"{definitions[unit_type]}")
+    st.info(f"**{definitions[unit_type]}**")
     st.warning(f"📌 {formulas[unit_type]}")
 
     # Conversion Logic
@@ -107,29 +107,29 @@ elif page == "Progress Graphs":
     st.download_button("📥 Download CSV", df.to_csv(index=False), "progress_data.csv", "text/csv")
 
 elif page == "About":
-    st.title("📌 About unit Converter")
+    st.title("📌 About User Converter")
     st.write("""
-    *Advanced Unit Converter* is a versatile tool designed to quickly and accurately convert between multiple units of measurement.
-    Whether you need to convert *length, weight, temperature, speed, time, or volume*, this converter provides an intuitive and efficient solution.
+    **Advanced Unit Converter** is a versatile tool designed to quickly and accurately convert between multiple units of measurement. 
+    Whether you need to convert **length, weight, temperature, speed, time, or volume**, this converter provides an intuitive and efficient solution.
 
-    ✅ *User-Friendly Interface*
-
+    ✅ **User-Friendly Interface**
+             
               – Simple and easy-to-use design for quick conversions.
-
-    ✅ *Accurate Conversions*
-
+             
+    ✅ **Accurate Conversions**
+             
               – Reliable formulas ensure precision in every calculation.
-
-    ✅ *Multiple Unit Support*
-
+             
+    ✅ **Multiple Unit Support** 
+             
              – Convert between various metric and imperial units.
 
-    ✅ *Downloadable Results*
-
+    ✅ **Downloadable Results**
+             
               – Save your converted values for future reference.
+             
 
-
-    This tool is perfect for students, engineers, scientists, and anyone who needs *fast and accurate* unit conversions! 🚀
+    This tool is perfect for students, engineers, scientists, and anyone who needs **fast and accurate** unit conversions! 🚀
     """)
 
 elif page == "Contact":
@@ -147,4 +147,4 @@ if st.button("Submit"):
     if username and name and email and message:
         st.success("✅ Thank you! Your message has been sent successfully.")
     else:
-        st.error("⚠ Please fill in all the fields before submitting.")
+        st.error("⚠️ Please fill in all the fields before submitting.")
